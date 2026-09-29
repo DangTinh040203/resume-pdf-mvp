@@ -1,0 +1,27 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: oklch(0.4919 0.2403 293.54);
+}
+
+body {
+  margin: 0;
+}
+
+@page {
+  size: 210mm 297mm;
+  margin: 14mm;
+}
+
+/* Cosmetic only — Paged.js already produces correctly A4-sized page boxes
+   without this; it just doesn't ship default "looks like paper" chrome. */
+.pagedjs_pages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.pagedjs_page {
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
